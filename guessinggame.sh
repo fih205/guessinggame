@@ -3,20 +3,21 @@
 
 echo "Guess how many files are in the current directory?"
 read guessnum
+filenum=$(ls -1 | wc -l)
 
 function guessinggame {
-  while [[ $guessnum -eq 3 ]]
+  while [[ $guessnum -eq filenum ]]
   do
     break
   done
 
-  while [[ $guessnum -ne 3 ]]
+  while [[ $guessnum -ne filenum ]]
   do
-    if [[ $guessnum -gt 3 ]]
+    if [[ $guessnum -gt filenum ]]
     then
       echo "The number is too big. Guess again:"
       read guessnum
-    else [[ $guessnum -lt 3 ]]
+    else [[ $guessnum -lt filenum ]]
       echo "The number is too small. Guess again:"
       read guessnum
     fi
