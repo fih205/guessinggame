@@ -1,3 +1,3 @@
 The Guessinggame
-ow'date'
-27
+ate
+26
